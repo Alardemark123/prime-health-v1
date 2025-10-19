@@ -16,7 +16,7 @@ export default function BlogPage() {
       author: 'Dr. Sarah Mitchell',
       date: 'May 15, 2025',
       readTime: '5 min read',
-      image: 'https://images.unsplash.com/photo-1606206873764-fd15e242df52?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGVjaG5vbG9neXxlbnwwfHx8Ymx1ZXwxNzYwNjg5NjY2fDA&ixlib=rb-4.1.0&q=85'
+      image: '/doctors/Doctor-one-female.png'
     },
     {
       slug: 'heart-health-tips',
@@ -26,7 +26,7 @@ export default function BlogPage() {
       author: 'Dr. James Anderson',
       date: 'May 12, 2025',
       readTime: '7 min read',
-      image: 'https://images.pexels.com/photos/4957793/pexels-photo-4957793.jpeg'
+      image: '/doctors/Doctor-three-male.png'
     },
     {
       slug: 'laboratory-testing-importance',
@@ -36,7 +36,7 @@ export default function BlogPage() {
       author: 'Dr. Emily Chen',
       date: 'May 10, 2025',
       readTime: '4 min read',
-      image: 'https://images.pexels.com/photos/8728559/pexels-photo-8728559.jpeg'
+      image: '/doctors/Doctor-two-female.png'
     },
     {
       slug: 'cancer-screening-guidelines',
@@ -46,7 +46,7 @@ export default function BlogPage() {
       author: 'Dr. Michael Roberts',
       date: 'May 8, 2025',
       readTime: '6 min read',
-      image: 'https://images.unsplash.com/photo-1597807037496-c56a1d8bc29a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBob3NwaXRhbHxlbnwwfHx8Ymx1ZXwxNzYwNjg5NjYxfDA&ixlib=rb-4.1.0&q=85'
+      image: '/doctors/Doctor-three-male.png'
     },
     {
       slug: 'managing-chronic-conditions',
@@ -56,7 +56,7 @@ export default function BlogPage() {
       author: 'Dr. Jennifer Lee',
       date: 'May 5, 2025',
       readTime: '8 min read',
-      image: 'https://images.unsplash.com/photo-1648047547783-8d64bf80c17f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBob3NwaXRhbHxlbnwwfHx8Ymx1ZXwxNzYwNjg5NjYxfDA&ixlib=rb-4.1.0&q=85'
+      image: '/doctors/Doctor-two-female.png'
     },
     {
       slug: 'nutrition-wellness',
@@ -66,7 +66,7 @@ export default function BlogPage() {
       author: 'Dr. David Thompson',
       date: 'May 3, 2025',
       readTime: '5 min read',
-      image: 'https://images.unsplash.com/photo-1512978587787-47fc7ac10b63?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBob3NwaXRhbHxlbnwwfHx8Ymx1ZXwxNzYwNjg5NjYxfDA&ixlib=rb-4.1.0&q=85'
+      image: '/doctors/Doctor-three-male.png'
     }
   ]
 

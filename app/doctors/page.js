@@ -12,7 +12,7 @@ export default function DoctorsPage() {
       qualification: 'MD, FRCR',
       experience: '18 years',
       description: 'Board-certified radiologist specializing in PET-CT imaging and nuclear medicine diagnostics.',
-      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400'
+      image: '/doctors/Doctor-one-female.png'
     },
     {
       name: 'Dr. James Anderson',
@@ -20,7 +20,7 @@ export default function DoctorsPage() {
       qualification: 'MD, FACC',
       experience: '22 years',
       description: 'Expert in interventional cardiology and cardiac imaging with extensive experience in complex cases.',
-      image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400'
+      image: '/doctors/Doctor-three-male.png'
     },
     {
       name: 'Dr. Emily Chen',
@@ -28,7 +28,7 @@ export default function DoctorsPage() {
       qualification: 'PhD, MD',
       experience: '15 years',
       description: 'Specialist in clinical pathology and laboratory medicine with focus on diagnostic accuracy.',
-      image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400'
+      image: '/doctors/Doctor-two-female.png'
     },
     {
       name: 'Dr. Michael Roberts',
@@ -36,7 +36,7 @@ export default function DoctorsPage() {
       qualification: 'MD, ABNM',
       experience: '20 years',
       description: 'Leading expert in radiopharmaceutical therapy and molecular imaging techniques.',
-      image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400'
+      image: '/doctors/Doctor-three-male.png'
     },
     {
       name: 'Dr. Jennifer Lee',
@@ -44,7 +44,7 @@ export default function DoctorsPage() {
       qualification: 'MBBS, MRCP',
       experience: '12 years',
       description: 'Primary care physician with expertise in preventive medicine and chronic disease management.',
-      image: 'https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=400'
+      image: '/doctors/Doctor-two-female.png'
     },
     {
       name: 'Dr. David Thompson',
@@ -52,28 +52,48 @@ export default function DoctorsPage() {
       qualification: 'MD, PhD',
       experience: '25 years',
       description: 'Renowned neurologist specializing in movement disorders and neuroimaging.',
-      image: 'https://images.unsplash.com/photo-1637059824899-a441006a6875?w=400'
+      image: '/doctors/Doctor-three-male.png'
     }
   ]
 
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-indigo-900 via-blue-800 to-teal-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 bg-teal-500 text-white">
-              Our Medical Team
-            </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+     
+      <section
+  className="relative mt-20 py-20 bg-cover bg-center overflow-hidden"
+>
+  {/* Blurred Background Layer */}
+  <div
+    className="absolute inset-0 bg-cover bg-center scale-105 blur-[6px]"
+    style={{
+      backgroundImage: "url('/prime_health_attachment/Picture1.png')",
+    }}
+  />
+
+  {/* Light Green Ombre (left-to-right) */}
+  <div className="absolute inset-0 bg-gradient-to-r from-green-200/50 via-transparent to-green-200/50 pointer-events-none z-10" />
+
+  {/* Subtle Dark Overlay */}
+  <div className="absolute inset-0 bg-black/40 z-10" />
+
+  {/* Content */}
+  <div className="relative container mx-auto px-4 z-20">
+    <div className="max-w-6xl mx-auto text-center">
+      <Badge className="mb-6 bg-emerald-500 text-white border border-emerald-500 hover:bg-transparent hover:text-emerald-500 transition-colors duration-300">
+        <User className="inline-block mr-2 h-4 w-4" />
+        Our Medical Team
+      </Badge>
+
+      <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Meet Our Expert Doctors
             </h1>
             <p className="text-xl text-blue-100">
               Experienced healthcare professionals dedicated to providing exceptional medical care
             </p>
-          </div>
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
 
       {/* Doctors Grid */}
       <section className="py-20 bg-background">

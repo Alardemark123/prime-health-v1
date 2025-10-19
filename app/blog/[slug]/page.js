@@ -18,7 +18,7 @@ export default function BlogDetailPage() {
     author: 'Dr. Sarah Mitchell',
     date: 'May 15, 2025',
     readTime: '5 min read',
-    image: 'https://images.unsplash.com/photo-1606206873764-fd15e242df52?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGVjaG5vbG9neXxlbnwwfHx8Ymx1ZXwxNzYwNjg5NjY2fDA&ixlib=rb-4.1.0&q=85',
+    image: '/doctors/Doctor-one-female.png',
     content: `
 PET-CT imaging represents one of the most significant advances in modern medical diagnostics, combining two powerful imaging technologies to provide comprehensive information about the body's structure and function.
 

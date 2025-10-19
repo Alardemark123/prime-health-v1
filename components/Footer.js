@@ -52,15 +52,18 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-400">
                 <MapPin className="h-5 w-5 text-teal-500" />
-                <span>123 Medical Center Blvd, Healthcare City</span>
+                <span>63 Malakas St. Franca Arcade Bldg., Brgy.Pinyahan Quezon City
+                </span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Phone className="h-5 w-5 text-teal-500" />
-                <span>+1 (555) 123-4567</span>
+                <span>(02) 7000 – 6385 | 0906 – 002 9461
+                </span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail className="h-5 w-5 text-teal-500" />
-                <span>info@primehealth.com</span>
+                <span>franca.primehealthimaging@gmail.com
+                </span>
               </div>
             </div>
           </div>

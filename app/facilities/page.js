@@ -5,14 +5,14 @@ import { Badge } from '@/components/ui/badge'
 import { 
   Wifi, 
   Coffee, 
-  Wheelchair, 
-  Parking, 
   Shield, 
   Wind,
   Monitor,
   Zap,
   Building2,
-  Utensils
+  Utensils,
+  Car,
+  Accessibility
 } from 'lucide-react'
 
 export default function FacilitiesPage() {
@@ -36,13 +36,13 @@ export default function FacilitiesPage() {
       color: 'from-cyan-500 to-cyan-600'
     },
     {
-      icon: <Wheelchair className="h-10 w-10" />,
+      icon: <Car className="h-10 w-10" />,
       title: 'Wheelchair Accessible',
       description: 'Fully accessible facility with ramps, elevators, and wide corridors designed for easy wheelchair navigation.',
       color: 'from-indigo-500 to-indigo-600'
     },
     {
-      icon: <Parking className="h-10 w-10" />,
+      icon: <Accessibility className="h-10 w-10" />,
       title: 'Ample Parking',
       description: 'Spacious parking facility with dedicated spaces for patients and visitors, including accessible parking spots.',
       color: 'from-purple-500 to-purple-600'

@@ -30,15 +30,16 @@ export default function Navigation() {
     { href: '/about', label: 'About Us' },
     { href: '/services', label: 'Services' },
     { href: '/departments', label: 'Departments' },
+    { href: '/machines', label: 'Machines' },
     { href: '/doctors', label: 'Doctors' },
     { href: '/facilities', label: 'Facilities' },
-    { href: '/blog', label: 'Blog' },
+    // { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
   ]
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/95 backdrop-blur-md shadow-lg'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
@@ -46,12 +47,12 @@ export default function Navigation() {
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="relative">
               <Activity className={`h-8 w-8 transition-colors ${
-                scrolled ? 'text-blue-600' : 'text-white'
+                scrolled ? 'text-blue-600' : 'text-blue-600'
               } group-hover:text-teal-500`} />
               <Heart className="h-4 w-4 text-teal-500 absolute -top-1 -right-1 fill-teal-500" />
             </div>
             <span className={`text-2xl font-bold transition-colors ${
-              scrolled ? 'text-blue-900' : 'text-white'
+              scrolled ? 'text-blue-900' : 'text-blue-600'
             } group-hover:text-blue-600`}>
               Prime <span className="text-teal-500">Health</span>
             </span>
@@ -65,10 +66,10 @@ export default function Navigation() {
                 href={link.href}
                 className={`px-4 py-2 rounded-full transition-all duration-200 font-medium ${
                   pathname === link.href
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-teal-500 text-white'
                     : scrolled
-                    ? 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'
-                    : 'text-white hover:bg-white/10'
+                    ? 'text-gray-600 hover:bg-teal-50 hover:text-teal-500'
+                    : 'text-gray-600 hover:bg-teal-50 hover:text-teal-500'
                 }`}
               >
                 {link.label}
@@ -77,17 +78,17 @@ export default function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          {/* <div className="hidden lg:block">
             <Button className="bg-teal-500 hover:bg-teal-600 text-white rounded-full px-6">
               <Link href="/contact">Book Appointment</Link>
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`lg:hidden p-2 rounded-lg transition-colors ${
-              scrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+              scrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-gray-700 hover:bg-gray-100'
             }`}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -95,7 +96,7 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
+        {/* {isOpen && (
           <div className="lg:hidden py-4 bg-white rounded-2xl shadow-xl mt-2 border">
             <div className="flex flex-col space-y-2 px-4">
               {navLinks.map((link) => (
@@ -117,7 +118,7 @@ export default function Navigation() {
               </Button>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </nav>
   )

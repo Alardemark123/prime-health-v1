@@ -171,9 +171,9 @@ export default function TermsPage() {
                   If you have questions about these Terms of Use, please contact us:
                 </p>
                 <div className="space-y-2 text-muted-foreground">
-                  <p><strong>Email:</strong> legal@primehealth.com</p>
-                  <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                  <p><strong>Mail:</strong> Legal Department, Prime Health, 123 Medical Center Blvd, Healthcare City, HC 12345</p>
+                  <p><strong>Email:</strong>franca.primehealthimaging@gmail.com                  </p>
+                  <p><strong>Phone:</strong> (02) 7000 – 6385 | 0906 – 002 9461</p>
+                  <p><strong>Mail:</strong> 63 Malakas St. Franca Arcade Bldg., Brgy.Pinyahan Quezon City</p>
                 </div>
               </CardContent>
             </Card>

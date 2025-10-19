@@ -2,7 +2,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Award, Target, Eye, Users, Heart, Shield } from 'lucide-react'
+import Image from 'next/image'
+import { Award, Target, Eye, Users, Heart, Shield, Mail, AppWindow} from 'lucide-react'
 
 export default function AboutPage() {
   const values = [
@@ -31,7 +32,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-32 bg-gradient-to-br from-blue-900 via-blue-800 to-teal-900">
+      {/* <section className="relative py-32 bg-gradient-to-br from-blue-900 via-blue-800 to-teal-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-teal-500 text-white">
@@ -45,7 +46,41 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <section
+  className="relative mt-20 py-20 bg-cover bg-center overflow-hidden"
+>
+  {/* Blurred Background Layer */}
+  <div
+    className="absolute inset-0 bg-cover bg-center scale-105 blur-[6px]"
+    style={{
+      backgroundImage: "url('/prime_health_attachment/Picture1.png')",
+    }}
+  />
+
+  {/* Light Green Ombre (left-to-right) */}
+  <div className="absolute inset-0 bg-gradient-to-r from-green-200/50 via-transparent to-green-200/50 pointer-events-none z-10" />
+
+  {/* Subtle Dark Overlay */}
+  <div className="absolute inset-0 bg-black/40 z-10" />
+
+  {/* Content */}
+  <div className="relative container mx-auto px-4 z-20">
+  <div className="max-w-4xl mx-auto text-center">
+            <Badge className="mb-6 bg-teal-500 text-white">
+              <AppWindow className="inline-block mr-2 h-4 w-4" />
+              About Prime Health
+            </Badge>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Leading Healthcare Innovation Since 1998
+            </h1>
+            <p className="text-xl text-blue-100">
+              Committed to delivering exceptional medical care through advanced technology and compassionate service
+            </p>
+          </div>
+  </div>
+</section>
 
       {/* Our Story */}
       <section className="py-20 bg-background">
@@ -69,10 +104,12 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1648047547783-8d64bf80c17f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBob3NwaXRhbHxlbnwwfHx8Ymx1ZXwxNzYwNjg5NjYxfDA&ixlib=rb-4.1.0&q=85"
+              <Image
+                  src="/prime_health_attachment/Picture1.png"
                   alt="Prime Health Facility"
-                  className="rounded-2xl shadow-2xl"
+                  width={600}
+                  height={400}
+                  className="rounded-2xl shadow-2xl object-cover"
                 />
               </div>
             </div>
@@ -90,11 +127,14 @@ export default function AboutPage() {
                   <div className="h-16 w-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-4">
                     <Target className="h-10 w-10 text-blue-600" />
                   </div>
-                  <CardTitle className="text-3xl">Our Mission</CardTitle>
+                  <CardTitle className="text-3xl">Mission Statement</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg text-muted-foreground">
-                    To provide exceptional, patient-centered healthcare services through advanced medical technology, skilled professionals, and a commitment to continuous improvement in all aspects of care delivery.
+                  To improve patient outcomes by providing accessible and affordable PET-CT Scan services.
+                  <br />
+                  <br />
+To collaborate with the healthcare leaders and institution of the community
                   </p>
                 </CardContent>
               </Card>
@@ -104,11 +144,11 @@ export default function AboutPage() {
                   <div className="h-16 w-16 bg-teal-100 rounded-2xl flex items-center justify-center mb-4">
                     <Eye className="h-10 w-10 text-teal-600" />
                   </div>
-                  <CardTitle className="text-3xl">Our Vision</CardTitle>
+                  <CardTitle className="text-3xl">Vision Statement</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg text-muted-foreground">
-                    To be the most trusted and innovative healthcare provider in the region, recognized for excellence in medical services, patient satisfaction, and community health improvement.
+                  Our vision is to be a leading and trusted name in PET-CT imaging in the country by 2030.
                   </p>
                 </CardContent>
               </Card>
