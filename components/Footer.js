@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { Activity, Heart, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Footer() {
   const quickLinks = [
@@ -37,19 +38,30 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-6 group">
-              <div className="relative">
-                <Activity className="h-8 w-8 text-blue-500 group-hover:text-teal-500 transition-colors" />
-                <Heart className="h-4 w-4 text-teal-500 absolute -top-1 -right-1 fill-teal-500" />
-              </div>
-              <span className="text-2xl font-bold">
-                Prime <span className="text-teal-500">Health</span>
-              </span>
-            </Link>
+          <Link href="/" className="flex items-center space-x-2 group">
+  <div className="relative w-64 h-24 md:w-64 md:h-20">
+    <Image
+      src="/profile/Picture2.png"
+      alt="Prime Health logo"
+      fill
+      priority
+      className="object-contain object-center brightness-95 transition-transform duration-300 group-hover:scale-105"
+    />
+  </div>
+
+  {/* Optional text */}
+  {/* <span
+    className={`text-2xl font-bold transition-colors ${
+      scrolled ? 'text-blue-900' : 'text-blue-600'
+    } group-hover:text-teal-600`}
+  >
+    Prime <span className="text-teal-500">Health</span>
+  </span> */}
+</Link>
             <p className="text-gray-400 mb-6 max-w-md">
               Your trusted partner in advanced medical diagnostics and comprehensive healthcare services. Committed to excellence in patient care.
             </p>
-            <div className="space-y-3">
+            {/* <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-400">
                 <MapPin className="h-5 w-5 text-teal-500" />
                 <span>63 Malakas St. Franca Arcade Bldg., Brgy.Pinyahan Quezon City
@@ -65,7 +77,7 @@ export default function Footer() {
                 <span>franca.primehealthimaging@gmail.com
                 </span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}

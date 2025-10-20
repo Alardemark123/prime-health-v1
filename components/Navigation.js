@@ -11,6 +11,7 @@ import {
   Heart,
   Activity
 } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -31,11 +32,13 @@ export default function Navigation() {
     { href: '/services', label: 'Services' },
     { href: '/departments', label: 'Departments' },
     { href: '/machines', label: 'Machines' },
-    { href: '/doctors', label: 'Doctors' },
-    { href: '/facilities', label: 'Facilities' },
+    // { href: '/doctors', label: 'Doctors' },
+    // { href: '/facilities', label: 'Facilities' },
     // { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
   ]
+
+
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -45,18 +48,27 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="relative">
-              <Activity className={`h-8 w-8 transition-colors ${
-                scrolled ? 'text-blue-600' : 'text-blue-600'
-              } group-hover:text-teal-500`} />
-              <Heart className="h-4 w-4 text-teal-500 absolute -top-1 -right-1 fill-teal-500" />
-            </div>
-            <span className={`text-2xl font-bold transition-colors ${
-              scrolled ? 'text-blue-900' : 'text-blue-600'
-            } group-hover:text-blue-600`}>
-              Prime <span className="text-teal-500">Health</span>
-            </span>
-          </Link>
+  <div className="relative w-64 h-24 md:w-64 md:h-20">
+    <Image
+      src="/profile/Picture2.png"
+      alt="Prime Health logo"
+      fill
+      priority
+      className="object-contain object-center brightness-95 transition-transform duration-300 group-hover:scale-105"
+    />
+  </div>
+
+  {/* Optional text */}
+  {/* <span
+    className={`text-2xl font-bold transition-colors ${
+      scrolled ? 'text-blue-900' : 'text-blue-600'
+    } group-hover:text-teal-600`}
+  >
+    Prime <span className="text-teal-500">Health</span>
+  </span> */}
+</Link>
+
+
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">

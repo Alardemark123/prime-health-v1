@@ -56,97 +56,98 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-  {[
-    {
-      color: "blue",
-      icon: <Phone className="h-7 w-7 text-blue-600" />,
-      title: "Phone",
-      details: [
-        "(02) 7000 – 6385 - 0906 – 002 9461",
-        "8:00AM – 5:00PM",
-      ],
-      blobColor: "fill-blue-200/60",
-      abstractColor: "bg-blue-300/30",
-    },
-    {
-      color: "teal",
-      icon: <Mail className="h-7 w-7 text-teal-600" />,
-      title: "Email",
-      details: [
-        "franca.primehealthimaging@gmail.com",
-        "We'll respond within 24 hours",
-      ],
-      blobColor: "fill-teal-200/60",
-      abstractColor: "bg-teal-300/30",
-    },
-    {
-      color: "cyan",
-      icon: <MapPin className="h-7 w-7 text-cyan-600" />,
-      title: "Location",
-      details: [
-        "63 Malakas St. Franca Arcade Bldg.",
-        "Brgy. Pinyahan, Quezon City",
-      ],
-      blobColor: "fill-cyan-200/60",
-      abstractColor: "bg-cyan-300/30",
-    },
-  ].map((item, idx) => (
-    <Card
-      key={idx}
-      className={`
-        group relative overflow-hidden border border-gray-200 
-        bg-white hover:border-${item.color}-500 hover:shadow-xl 
-        transition-all duration-500 rounded-2xl
-      `}
-    >
-      {/* Full Wavey Background */}
-      <div className="absolute inset-0 opacity-70">
-        <svg
-          viewBox="0 0 500 200"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          className={`w-full h-full ${item.blobColor} transition-transform duration-700 group-hover:scale-105`}
-        >
-          <path d="M0,100 C150,200 350,0 500,100 L500,200 L0,200 Z" />
-        </svg>
+          {[
+  {
+    color: "blue",
+    icon: <Phone className="h-6 w-6 text-blue-600" />,
+    title: "Phone",
+    details: [
+      { city: "Quezon City", info: "(02) 7000 – 6385 / 0906 – 002 9461" },
+      { city: "Mandaluyong", info: "(02) 7000 – 1234 / 0906 – 001 2345" },
+    ],
+    blobColor: "fill-blue-200/60",
+    abstractColor: "bg-blue-300/30",
+  },
+  {
+    color: "teal",
+    icon: <Mail className="h-6 w-6 text-teal-600" />,
+    title: "Email",
+    details: [
+      { city: "Quezon City", info: "franca.primehealthimaging@gmail.com" },
+      { city: "Mandaluyong", info: "mandaluyong.primehealthimaging@gmail.com" },
+    ],
+    blobColor: "fill-teal-200/60",
+    abstractColor: "bg-teal-300/30",
+  },
+  {
+    color: "cyan",
+    icon: <MapPin className="h-6 w-6 text-cyan-600" />,
+    title: "Location",
+    details: [
+      { city: "Quezon City", info: "63 Malakas St., Brgy. Pinyahan, Quezon City" },
+      { city: "Mandaluyong", info: "12 Mandaluyong Ave., Mandaluyong City" },
+    ],
+    blobColor: "fill-cyan-200/60",
+    abstractColor: "bg-cyan-300/30",
+  },
+].map((item, idx) => (
+  <Card
+    key={idx}
+    className={`
+      group relative overflow-hidden border border-gray-200 
+      bg-white hover:border-${item.color}-500 hover:shadow-xl 
+      transition-all duration-500 rounded-2xl
+    `}
+  >
+    {/* Full Wavey Background */}
+    <div className="absolute inset-0 opacity-70">
+      <svg
+        viewBox="0 0 500 200"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+        className={`w-full h-full ${item.blobColor} transition-transform duration-700 group-hover:scale-105`}
+      >
+        <path d="M0,100 C150,200 350,0 500,100 L500,200 L0,200 Z" />
+      </svg>
+    </div>
+
+    {/* Abstract Blurred Overlay */}
+    <div
+      className={`absolute top-[-50px] right-[-60px] w-60 h-60 rounded-full ${item.abstractColor} blur-3xl opacity-60 rotate-[25deg]`}
+    />
+    <div
+      className={`absolute bottom-[-40px] left-[-50px] w-56 h-56 rounded-full ${item.abstractColor} blur-3xl opacity-50 rotate-[-20deg]`}
+    />
+
+    <CardHeader className="relative flex flex-col items-center text-center z-10">
+      <div
+        className={`h-14 w-14 bg-${item.color}-100 rounded-xl flex items-center justify-center mb-3 transition-transform duration-300 group-hover:scale-110`}
+      >
+        {item.icon}
       </div>
+      <CardTitle className="text-base font-semibold text-gray-900 tracking-tight">
+        {item.title}
+      </CardTitle>
+    </CardHeader>
 
-      {/* Abstract Blurred Overlay */}
-      <div
-        className={`absolute top-[-50px] right-[-60px] w-72 h-72 rounded-full ${item.abstractColor} blur-3xl opacity-60 rotate-[25deg]`}
-      />
-      <div
-        className={`absolute bottom-[-40px] left-[-50px] w-64 h-64 rounded-full ${item.abstractColor} blur-3xl opacity-50 rotate-[-20deg]`}
-      />
-
-      <CardHeader className="relative flex flex-col items-center text-center z-10">
-        <div
-          className={`h-16 w-16 bg-${item.color}-100 rounded-2xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110`}
-        >
-          {item.icon}
+    <CardContent className="relative text-center space-y-4 z-10 px-2">
+      {item.details.map((branch, i) => (
+        <div key={i} className="flex flex-col items-center">
+          <span className="text-xs font-semibold text-gray-700">{branch.city}</span>
+          <span className="text-sm text-gray-700">{branch.info}</span>
+          {i !== item.details.length - 1 && (
+            <hr className="w-16 border-t border-gray-300 my-2" />
+          )}
         </div>
-        <CardTitle className="text-lg font-semibold text-gray-900 tracking-wide">
-          {item.title}
-        </CardTitle>
-      </CardHeader>
+      ))}
+    </CardContent>
+  </Card>
+))}
 
-      <CardContent className="relative text-center space-y-1 z-10">
-        {item.details.map((text, i) => (
-          <p
-            key={i}
-            className={`text-sm ${
-              i === item.details.length - 1
-                ? "text-gray-600 italic"
-                : `text-${item.color}-700 font-medium`
-            }`}
-          >
-            {text}
-          </p>
-        ))}
-      </CardContent>
-    </Card>
-  ))}
-</div>
+
+
+
+          </div>
 
 
 
